@@ -1,0 +1,51 @@
+body, input {
+  font: 24px "Press Start 2P", monospace;
+  text-transform: lowercase;
+  color: yellow;
+}
+
+body {
+  margin: 0;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  background: blue;
+  -webkit-transition: background 0.06s;
+          transition: background 0.06s;
+}
+
+.flash {
+  background: #8888ff;
+}
+
+form {
+  position: relative;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.25em;
+  padding-left: 36px;
+}
+form::before {
+  content: ">";
+  margin-left: -36px;
+}
+
+input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 0;
+  padding: 0 0 0 2em;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5em;
+  text-indent: -1em;
+  padding-left: 1em;
+}

@@ -1,0 +1,80 @@
+html, body, .vcent {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inconsolata, monospace;
+  color: #7b9;
+  background: #101818;
+  text-shadow: 0 0 4px #699;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #8f9f97; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #8f9f97; /* Gecko Browsers */
+}
+
+article {
+  position: relative;
+}
+
+section {
+  width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section h1 {
+  position: relative;
+  height: 42px;
+  width: 480px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 0;
+  padding-left: 1em;
+  font: 16px/42px Inconsolata, monospace;
+  background: #304038;
+  cursor: pointer;
+}
+section h1 .progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #101818;
+}
+section h1 .text {
+  position: relative;
+}
+section p {
+  margin-left: 18px;
+  margin-right: 18px;
+  line-height: 1.46em;
+  font-size: 16px;
+  text-align: justify;
+}
+
+footer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+}
+footer a {
+  color: #7b9;
+}
+
+.vcent, .container {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.container {
+  width: 60%;
+  text-align: justified;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$rjs</title>
+	<style>
+		body {
+			overflow: hidden;
+		}
+		canvas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 100% !important;
+			width: 100% !important;
+			-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+			    -ms-transform: translate(-50%, -50%); /* IE 9 */
+			        transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<script src="http://cdn.jsdelivr.net/terra/latest/mainfile"></script>
+	<script>
+		!function () {
+			var width = window.innerWidth;
+			var height = window.innerHeight;
+			var cellSize = Math.max(width, height) / 75;
+
+			var gameOfLife = new terra.Terrarium(Math.ceil(width / cellSize), Math.ceil(height / cellSize), {
+				cellSize: cellSize,
+				trails: 0.9,
+				periodic: true,
+				background: [0, 0, 0]
+			});
+
+			terra.registerCA({
+				type: 'GoL',
+				character: '$',
+				color: [0, 255, 0],
+				colorFn: function () { return this.alive ? this.color + ',1' : '0,0,0,0'; },
+				process: function (neighbors, x, y) {
+					var surrounding = neighbors.filter(function (spot) {
+						return spot.creature.alive;
+					}).length;
+					this.alive = surrounding === 3 || surrounding === 2 && this.alive;
+					return true;
+				}
+			}, function () {
+				this.alive = Math.random() < 0.5;
+			});
+
+			gameOfLife.grid = gameOfLife.makeGrid('GoL');
+			gameOfLife.animate();
+		}();
+	</script>
+</body>
+</html>
