@@ -1,3 +1,9 @@
+body {
+  background: #383838;
+  font-size: 36px;
+  -webkit-font-smoothing: none;
+}
+
 .tinyterm {
-  font: 24px "Press Start 2P", monospace;
+	 font-family: VT323, monospace;
 }

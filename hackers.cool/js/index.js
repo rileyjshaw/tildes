@@ -139,7 +139,7 @@
 
   if (typeof WebFont === 'object') {
     WebFont.load({
-      google: { families: ['Press Start 2P'] },
+      google: { families: ['VT323'] },
       active: init
     });
   } else {
