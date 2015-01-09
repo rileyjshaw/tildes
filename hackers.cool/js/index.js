@@ -29,10 +29,11 @@
       term.input.disabled = true;
 
       if (typeof speed !== 'number') {
-        speed = 200;
+        speed = 150;
       }
 
       str = str.split('').reverse();
+      str.push('');
 
       !function inner () {
         var delay = (0.25 + Math.random()) * speed;
@@ -118,7 +119,7 @@
         } else if (direction === 'next') {
           return redirect('../~florian');
         } else {
-          return false;
+          return null;
         }
       },
       desc: 'Continue on your webring journy. Accepts \'next\' or \'prev\'.',
