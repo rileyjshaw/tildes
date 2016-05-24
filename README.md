@@ -3,9 +3,9 @@ tildes
 
 a collection of 1337 microsites
 
-## They're alive!
+## They're ~~alive~~ dropping like flies!
 
  - http://hackers.cool/~rileyjshaw
- - http://hypertext.website/~rileyjshaw
- - http://qhack.ca/~rileyjshaw
+ - ~~http://hypertext.website/~rileyjshaw~~
+ - ~~http://qhack.ca/~rileyjshaw~~
  - http://riotgirl.club/~rileyjshaw
