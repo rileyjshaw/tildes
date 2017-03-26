@@ -123,21 +123,28 @@
 
     term.register('cd', {
       fn: redirect,
-      desc: 'Change the current directory to DIR.'
+      desc: 'Change the current directory to DIR.',
     });
 
     term.register('echo', {
       fn: function () {
         return Array.prototype.join.call(arguments, ' ');
       },
-      desc: 'Write arguments to the standard output.'
+      desc: 'Write arguments to the standard output.',
     });
 
     term.register('ls', {
       fn: function () {
         return 'There is nothing here for you. Try \'help\'.';
       },
-      desc: 'List directory contents.'
+      desc: 'List directory contents.',
+    });
+
+    term.register('git', {
+      fn: function () {
+        return redirect('https://github.com/rileyjshaw/tinyterm', true);
+      },
+      desc: 'Check out the library that makes this possible.',
     });
 
     term.register('giveup', {
@@ -152,7 +159,7 @@
           'and',
           'Never gonna run around',
           'Never gonna let you down',
-          'Never gonna give you up'
+          'Never gonna give you up',
         ];
 
         !function next () {
@@ -168,14 +175,14 @@
 
         return null;
       },
-      desc: 'Abandon all hope.'
+      desc: 'Abandon all hope.',
     });
 
     term.register('ping', {
       fn: function () {
         return 'pong';
       },
-      desc: 'Says pong.'
+      desc: 'Says pong.',
     });
 
     term.register('wargames', {
@@ -206,7 +213,7 @@
                   type('term', 'HOW ABOUT A NICE GAME OF CHESS?', function () {
                     term.register('chess', {
                       fn: function () {
-                        redirect('http://www.imdb.com/title/tt0086567/', true);
+                        return redirect('http://www.imdb.com/title/tt0086567/', true);
                       },
                       desc: 'The hottest new game from PROTOVISION',
                     });
@@ -253,7 +260,7 @@
       fn: function () {
         return 'You are visitor #' + phpDataRJS.visNum + ' (or more).';
       },
-      desc: 'Prints visitor number.'
+      desc: 'Prints visitor number.',
     });
 
     type('term', 'Welcome.', function () {
