@@ -256,7 +256,7 @@
       desc: 'Prints visitor number.'
     });
 
-    type('term', 'Welcome', function () {
+    type('term', 'Welcome.', function () {
       type('user', 'whoami');
     });
   }
