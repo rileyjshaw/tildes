@@ -135,7 +135,7 @@
 
     term.register('ls', {
       fn: function () {
-        return 'There is nothing here for you.';
+        return 'There is nothing here for you. Try \'help\'.';
       },
       desc: 'List directory contents.'
     });
